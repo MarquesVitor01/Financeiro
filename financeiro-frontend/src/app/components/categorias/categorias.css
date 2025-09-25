@@ -1,0 +1,134 @@
+.categorias-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px 30px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.categorias-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.categorias-container form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.categorias-container input[type="text"],
+.categorias-container select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  min-width: 180px;
+  transition: border 0.2s;
+}
+
+.categorias-container input[type="text"]:focus,
+.categorias-container select:focus {
+  outline: none;
+  border-color: #6c63ff;
+}
+
+.categorias-container label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.categorias-container button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #6c63ff;
+  color: #fff;
+  font-weight: 500;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.categorias-container button:hover {
+  background-color: #574fd6;
+  transform: translateY(-2px);
+}
+
+.categorias-container button:active {
+  transform: translateY(0);
+}
+
+.categorias-container hr {
+  margin: 25px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.categorias-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.categorias-container th,
+.categorias-container td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.categorias-container th {
+  background-color: #f1f1f1;
+  font-weight: 600;
+}
+
+.categorias-container tr:hover {
+  background-color: #f5f5ff;
+}
+
+.categorias-container td button {
+  margin-right: 6px;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  background-color: #ff6584;
+}
+
+.categorias-container td button:hover {
+  background-color: #e03b6e;
+}
+.paginacao {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 5px;
+}
+
+.paginacao button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #6c63ff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.paginacao button:hover:not(:disabled) {
+  background-color: #574fd6;
+}
+
+.paginacao button:disabled {
+  background-color: #ccc;
+  cursor: default;
+}
+
+.paginacao button.active {
+  background-color: #ff6584;
+}

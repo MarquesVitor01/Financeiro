@@ -1,0 +1,65 @@
+<div class="categorias-container">
+  <h2>Gestão de Categorias</h2>
+
+  <form (ngSubmit)="editando ? salvarEdicao() : adicionarCategoria()">
+    <input
+      type="text"
+      placeholder="Nome da categoria"
+      [(ngModel)]="novaCategoria.nome"
+      name="nome"
+      required
+    />
+
+    <select [(ngModel)]="novaCategoria.tipo" name="tipo" required>
+      <option value="Receita">Receita</option>
+      <option value="Despesa">Despesa</option>
+    </select>
+
+    <label>
+      <input type="checkbox" [(ngModel)]="novaCategoria.ativo" name="ativo" />
+      Ativa
+    </label>
+
+    <button type="submit">
+      {{ editando ? "Salvar" : "Adicionar" }}
+    </button>
+    <button *ngIf="editando" type="button" (click)="cancelarEdicao()">Cancelar</button>
+  </form>
+
+  <hr />
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Tipo</th>
+        <th>Status</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let categoria of categoriasPaginadas()">
+        <td>{{ categoria.nome }}</td>
+        <td>{{ categoria.tipo }}</td>
+        <td>{{ categoria.ativo ? "Ativa" : "Inativa" }}</td>
+        <td>
+          <button (click)="editarCategoria(categoria)">Editar</button>
+          <button (click)="excluirCategoria(categoria.id)">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Paginação -->
+  <div class="paginacao" *ngIf="totalPaginas() > 1">
+    <button (click)="irParaPagina(paginaAtual - 1)" [disabled]="paginaAtual === 1">«</button>
+
+    <button *ngFor="let n of [].constructor(totalPaginas()); let i = index"
+            (click)="irParaPagina(i + 1)"
+            [class.active]="paginaAtual === i + 1">
+      {{ i + 1 }}
+    </button>
+
+    <button (click)="irParaPagina(paginaAtual + 1)" [disabled]="paginaAtual === totalPaginas()">»</button>
+  </div>
+</div>

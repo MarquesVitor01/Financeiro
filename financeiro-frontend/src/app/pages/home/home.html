@@ -1,0 +1,74 @@
+<div class="container">
+
+  <nav class="mt-5">
+    <a routerLink="/">Início</a> |
+    <a routerLink="/cadastro">Nova Transação</a> |
+    <a routerLink="/categorias">Categorias</a> |
+    <a routerLink="/dashboard">Dashboard</a>
+  </nav>
+
+  <hr />
+
+  <!-- Dashboard Cards -->
+  <div class="dashboard-cards">
+    <div class="card transacoes">
+      <h3>Total de Transações</h3>
+      <p>{{ totalTransacoes() }}</p>
+    </div>
+  </div>
+
+  <!-- Filtro centralizado -->
+  <div class="filtros-container">
+    <label>Pesquisar:</label>
+    <input type="text" placeholder="Descrição" [(ngModel)]="filtroDescricao" (input)="resetPag()">
+  </div>
+
+  <!-- Tabela de transações -->
+  <table class="table">
+    <thead>
+      <tr class="text-black">
+        <th>Id</th>
+        <th>Descrição</th>
+        <th>Valor</th>
+        <th>Nome</th>
+        <th>Categoria</th>
+        <th>Observações</th>
+        <th>Data</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transacao of transacoesPaginadas()">
+        <td>{{ transacao.id }}</td>
+        <td>{{ transacao.descricao }}</td>
+        <td>{{ transacao.valor }}</td>
+        <td>{{ transacao.categoriaNome }}</td>
+        <td>{{ transacao.observacoes }}</td>
+        <td>{{ transacao.dataCriacao }}</td>
+        <td>
+          <button class="btn btn-warning" [routerLink]="['/editar', transacao.id]">Editar</button>
+          <button class="btn btn-info" [routerLink]="['/detalhes', transacao.id]">Detalhes</button>
+          <button class="btn btn-danger" (click)="deletar(transacao.id)">Excluir</button>
+        </td>
+      </tr>
+
+      <tr *ngIf="transacoesFiltradas().length === 0" class="text-center">
+        <td colspan="7">Nenhuma transação encontrada</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Paginação centralizada -->
+  <div class="paginacao" *ngIf="totalPaginas() > 1">
+    <button (click)="irParaPagina(paginaAtual - 1)" [disabled]="paginaAtual === 1">«</button>
+
+    <button *ngFor="let n of [].constructor(totalPaginas()); let i = index"
+            (click)="irParaPagina(i + 1)"
+            [class.active]="paginaAtual === i + 1">
+      {{ i + 1 }}
+    </button>
+
+    <button (click)="irParaPagina(paginaAtual + 1)" [disabled]="paginaAtual === totalPaginas()">»</button>
+  </div>
+
+</div>

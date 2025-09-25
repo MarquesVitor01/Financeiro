@@ -1,0 +1,46 @@
+<div class="container mt-4">
+  <h2>Dashboard Financeiro</h2>
+
+  <!-- Filtros -->
+  <div class="row mb-3">
+    <div class="col-md-4">
+      <label>Data Início</label>
+      <input type="date" [(ngModel)]="dataInicio" class="form-control" />
+    </div>
+    <div class="col-md-4">
+      <label>Data Fim</label>
+      <input type="date" [(ngModel)]="dataFim" class="form-control" />
+    </div>
+    <div class="col-md-4 d-flex align-items-end">
+      <button class="btn btn-primary w-100" (click)="aplicarFiltro()">Aplicar Filtro</button>
+    </div>
+  </div>
+
+  <!-- Resumo -->
+  <div class="row text-center mb-4">
+    <div class="col-md-4 ">
+      <div class="card p-3 bg-success text-white">
+        <h4>Receitas</h4>
+        <p class="text-light">{{ totalReceitas | currency:'BRL' }}</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card p-3 bg-danger text-white">
+        <h4>Despesas</h4>
+        <p class="text-light">{{ totalDespesas | currency:'BRL' }}</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card p-3 bg-info text-white">
+        <h4>Saldo</h4>
+        <p class="text-light">{{ saldoTotal | currency:'BRL' }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gráfico -->
+  <div class="card p-3">
+    <h5 class="text-center">Total por Categoria</h5>
+    <canvas id="graficoCategorias"></canvas>
+  </div>
+</div>

@@ -1,0 +1,364 @@
+[
+  {
+    "ContainingType": "financeiro.Controllers.CategoriaController",
+    "Method": "AdicionarCategoria",
+    "RelativePath": "api/Categoria/AdicionarCategoria",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoriaCriacaoDto",
+        "Type": "financeiro.Dto.Categoria.CategoriaCriacaoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "financeiro.Models.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[financeiro.Models.CategoriaModel, financeiro, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "financeiro.Controllers.CategoriaController",
+    "Method": "BuscarCategoriaPorId",
+    "RelativePath": "api/Categoria/BuscarCategoriaPorId/{idCategoria}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idCategoria",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "financeiro.Models.ResponseModel\u00601[[financeiro.Models.CategoriaModel, financeiro, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "financeiro.Controllers.CategoriaController",
+    "Method": "BuscarCategoriaPorIdTransacao",
+    "RelativePath": "api/Categoria/BuscarCategoriaPorIdTransacao/{idTransacao}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idTransacao",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "financeiro.Models.ResponseModel\u00601[[financeiro.Models.CategoriaModel, financeiro, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "financeiro.Controllers.CategoriaController",
+    "Method": "EditarCategoria",
+    "RelativePath": "api/Categoria/EditarCategoria",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoriaEdicaoDto",
+        "Type": "financeiro.Dto.Categoria.CategoriaCriacaoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "financeiro.Models.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[financeiro.Models.CategoriaModel, financeiro, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "financeiro.Controllers.CategoriaController",
+    "Method": "ExcluirCategoria",
+    "RelativePath": "api/Categoria/ExcluirCategoria/{idCategoria}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idCategoria",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "financeiro.Models.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[financeiro.Models.CategoriaModel, financeiro, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "financeiro.Controllers.CategoriaController",
+    "Method": "ListarCategorias",
+    "RelativePath": "api/Categoria/ListarCategorias",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "financeiro.Models.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[financeiro.Models.CategoriaModel, financeiro, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Finance.Api.Controllers.RelatorioController",
+    "Method": "PorCategoria",
+    "RelativePath": "api/Relatorio/por-categoria",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dataInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "dataFim",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "financeiro.Models.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[financeiro.Dto.Relatorio.RelatorioCategoriaDto, financeiro, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Finance.Api.Controllers.RelatorioController",
+    "Method": "Resumo",
+    "RelativePath": "api/Relatorio/resumo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dataInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "dataFim",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "financeiro.Models.ResponseModel\u00601[[financeiro.Dto.Relatorio.ResumoRelatorioDto, financeiro, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "financeiro.Controllers.TransacaoController",
+    "Method": "AdicionarTransacao",
+    "RelativePath": "api/Transacao/AdicionarTransacao",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "transacaoCriacaoDto",
+        "Type": "financeiro.Dto.Transacao.TransacaoCriacaoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "financeiro.Models.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[financeiro.Models.TransacaoModel, financeiro, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "financeiro.Controllers.TransacaoController",
+    "Method": "BuscarTransacaoPorId",
+    "RelativePath": "api/Transacao/BuscarTransacaoPorId/{idTransacao}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idTransacao",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "financeiro.Models.ResponseModel\u00601[[financeiro.Models.TransacaoModel, financeiro, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "financeiro.Controllers.TransacaoController",
+    "Method": "BuscarTransacaoPorIdCategoria",
+    "RelativePath": "api/Transacao/BuscarTransacaoPorIdCategoria/{idCategoria}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idCategoria",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "financeiro.Models.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[financeiro.Models.TransacaoModel, financeiro, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "financeiro.Controllers.TransacaoController",
+    "Method": "EditarTransacao",
+    "RelativePath": "api/Transacao/EditarTransacao",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "transacaoEdicaoDto",
+        "Type": "financeiro.Dto.Transacao.TransacaoEdicaoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "financeiro.Models.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[financeiro.Models.TransacaoModel, financeiro, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "financeiro.Controllers.TransacaoController",
+    "Method": "ExcluirTransacao",
+    "RelativePath": "api/Transacao/ExcluirTransacao/{idTransacao}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idTransacao",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "financeiro.Models.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[financeiro.Models.TransacaoModel, financeiro, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "financeiro.Controllers.TransacaoController",
+    "Method": "ListarTransacoes",
+    "RelativePath": "api/Transacao/ListarTransacoes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "financeiro.Models.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[financeiro.Models.TransacaoModel, financeiro, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
